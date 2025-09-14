@@ -1,0 +1,220 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Inicio | Banco Familiar Simulador{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero-section py-5">
+  <div class="container">
+    <div class="row align-items-center min-vh-50">
+      <div class="col-lg-6">
+        <div class="animate-fade-up">
+          <h1 class="display-4 fw-bold mb-4">
+            Bienvenido al <br>
+            <span class="text-warning">Banco Familiar</span>
+          </h1>
+          <p class="lead mb-4">
+            Una plataforma educativa completa que simula el funcionamiento de un banco digital moderno.
+            Gestiona clientes, cuentas, transacciones y préstamos con total seguridad.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a href="#" class="btn btn-warning btn-lg px-4">
+              <i class="bi bi-play-circle me-2"></i>Comenzar Ahora
+            </a>
+            <a href="#features" class="btn btn-outline-light btn-lg px-4">
+              <i class="bi bi-info-circle me-2"></i>Conoce Más
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center animate-fade-up">
+          <div class="bg-white bg-opacity-10 rounded-3 p-4 backdrop-blur">
+            <i class="bi bi-bank2 display-1 text-warning mb-3 animate-pulse"></i>
+            <h4 class="text-white mb-3">Simulador Bancario</h4>
+            <div class="row text-center">
+              <div class="col-4">
+                <div class="border-end border-white border-opacity-25">
+                  <h5 class="text-warning mb-0">100%</h5>
+                  <small>Seguro</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="border-end border-white border-opacity-25">
+                  <h5 class="text-warning mb-0">24/7</h5>
+                  <small>Disponible</small>
+                </div>
+              </div>
+              <div class="col-4">
+                <h5 class="text-warning mb-0">Educativo</h5>
+                <small>Propósito</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="features-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="text-gradient mb-3">Funcionalidades Principales</h2>
+      <p class="lead-custom">Descubre todas las herramientas disponibles en nuestro simulador bancario</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Gestión de Clientes</h5>
+          <p class="text-muted">
+            Administra la información de clientes de forma segura.
+            Registro completo con validaciones y sistema de auditoría.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-credit-card-2-front"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Cuentas Digitales</h5>
+          <p class="text-muted">
+            Crea y gestiona cuentas bancarias digitales con diferentes tipos
+            y límites personalizables según las necesidades.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-arrow-left-right"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Transacciones</h5>
+          <p class="text-muted">
+            Simula transferencias, depósitos y retiros con validaciones
+            en tiempo real y historial completo de movimientos.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-cash-coin"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Sistema de Préstamos</h5>
+          <p class="text-muted">
+            Gestiona solicitudes de préstamos con cálculo automático
+            de intereses y planes de pago personalizados.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Auditoría Total</h5>
+          <p class="text-muted">
+            Sistema completo de logs y auditoría que registra todas
+            las acciones para garantizar la trazabilidad.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-graph-up-arrow"></i>
+          </div>
+          <h5 class="fw-bold mb-3">Dashboard Analytics</h5>
+          <p class="text-muted">
+            Visualiza estadísticas y métricas del banco con
+            gráficos interactivos y reportes personalizables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h3 class="text-gradient mb-3">¿Listo para comenzar?</h3>
+        <p class="lead-custom mb-0">
+          Únete a nuestra plataforma educativa y aprende sobre el funcionamiento
+          de los sistemas bancarios modernos de forma práctica e interactiva.
+        </p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <div class="d-flex flex-column gap-2">
+          <a href="#" class="btn btn-primary btn-lg">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Iniciar Sesión
+          </a>
+          <a href="#" class="btn btn-outline-primary">
+            <i class="bi bi-person-plus me-2"></i>Crear Cuenta
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-5" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="bg-white rounded-3 p-4 shadow-sm">
+          <div class="text-gradient mb-2">
+            <i class="bi bi-people display-4"></i>
+          </div>
+          <h4 class="fw-bold mb-1">1,000+</h4>
+          <p class="text-muted mb-0">Usuarios Registrados</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="bg-white rounded-3 p-4 shadow-sm">
+          <div class="text-gradient mb-2">
+            <i class="bi bi-credit-card display-4"></i>
+          </div>
+          <h4 class="fw-bold mb-1">5,000+</h4>
+          <p class="text-muted mb-0">Cuentas Creadas</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="bg-white rounded-3 p-4 shadow-sm">
+          <div class="text-gradient mb-2">
+            <i class="bi bi-arrow-left-right display-4"></i>
+          </div>
+          <h4 class="fw-bold mb-1">50,000+</h4>
+          <p class="text-muted mb-0">Transacciones</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="bg-white rounded-3 p-4 shadow-sm">
+          <div class="text-gradient mb-2">
+            <i class="bi bi-shield-check display-4"></i>
+          </div>
+          <h4 class="fw-bold mb-1">100%</h4>
+          <p class="text-muted mb-0">Seguridad</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
