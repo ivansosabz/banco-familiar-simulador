@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Apps del proyecto
+    "accounts",             # Nueva app para usuarios
     "core",
     "audits",
     # Apps de terceros
@@ -111,28 +112,55 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'es'  # Cambiado a español
+TIME_ZONE = 'America/Asuncion'  # Timezone de Paraguay
 
 USE_I18N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
-
 # Crispy Forms config
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+# Custom User Model
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# Authentication URLs
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/dashboard/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Messages Framework (para usar con Bootstrap)
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
+
+# Email configuration (para desarrollo)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Authentication backends
+AUTHENTICATION_BACKENDS = [
+    'accounts.backends.EmailBackend',  # Nuestro backend personalizado
+    'django.contrib.auth.backends.ModelBackend',  # Backend por defecto como respaldo
+]
+
+# Security settings (para desarrollo)
+SESSION_COOKIE_AGE = 3600  # 1 hora
+SESSION_SAVE_EVERY_REQUEST = True
